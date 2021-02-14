@@ -22,14 +22,7 @@ namespace Task1.Controllers
             _signInManager = signInManager;
         }
 
-        [Authorize]
-        [HttpGet]
-        [ActionName("Authorized")]
-        public IActionResult Authorized()
-        {
-            return Ok();
-        }
-
+       
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginModel login )
         {
